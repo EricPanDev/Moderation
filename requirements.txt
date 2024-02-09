@@ -2,3 +2,5 @@ flask
 pandas
 joblib
 scikit-learn
+discord.py
+httpx
