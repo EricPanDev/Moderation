@@ -58,11 +58,11 @@ Recommended values you should use for your applications:
 ```
 # For Automatic Action
 "harassment":2, # Disabled
-"hate":0.87,
-"hate/threatening":0.87,
-"self-harm":0.95,
-"sexual":0.88,
-"sexual/minors":0.88,
+"hate":0.67,
+"hate/threatening":0.67,
+"self-harm":0.75,
+"sexual":0.68,
+"sexual/minors":0.68,
 "violence":2, # Disabled
 "violence/graphic":2 # Disabled
 
