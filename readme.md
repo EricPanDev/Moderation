@@ -68,7 +68,7 @@ Recommended values you should use for your applications:
 
 # To silently log to moderation channel
 "harassment":0.45,
-"hate":0.75,
+"hate":0.30,
 "hate/threatening":0.37,
 "self-harm":0.37,
 "sexual":0.37,
