@@ -67,14 +67,14 @@ Recommended values you should use for your applications:
 "violence/graphic":2 # Disabled
 
 # To silently log to moderation channel
-"harassment":0.85,
+"harassment":0.45,
 "hate":0.75,
-"hate/threatening":0.75,
-"self-harm":0.75,
-"sexual":0.75,
-"sexual/minors":0.75,
-"violence":0.75,
-"violence/graphic":0.75
+"hate/threatening":0.37,
+"self-harm":0.37,
+"sexual":0.37,
+"sexual/minors":0.35,
+"violence":0.37,
+"violence/graphic":0.37
 ```
 
 Sample CURL Request
