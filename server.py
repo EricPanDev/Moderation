@@ -6,9 +6,15 @@ vectorizer = joblib.load('model_vectorizer.pkl')
 
 app = Flask(__name__)
 
+API_KEY = ""
+
 @app.route('/run', methods=['POST'])
 def run():
     global loaded_model, vectorizer
+
+    api_key = request.headers.get('x-api-key')
+    if not api_key or api_key != API_KEY:
+        return jsonify({'error': 'Unauthorized. Invalid API key.'}), 401
 
     if not request.json or 'text' not in request.json:
         return jsonify({'error': 'Invalid request. JSON with "text" field is expected.'}), 400
@@ -27,5 +33,5 @@ def run():
 
     return jsonify(data), 200
 
-print("Starting Moderation Server @ http://127.0.0.1:9235. Refer to https://github.com/ericpandev/Moderation for API docs.")
+print("Starting Moderation Server @ http://127.0.0.1:9235. Refer to https://github.com/ericpandev/Moderation for docs.")
 app.run("127.0.0.1", port=9235)
